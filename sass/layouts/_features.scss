@@ -1,0 +1,32 @@
+.features {
+	padding-top: 94px;
+	padding-bottom: 94px;
+
+	&__list {
+		display: flex;
+		gap: 30px;
+		background-color: var(--main-title-color);
+	}
+	&__icon {
+		width: 270px;
+		height: 120px;
+		background: var(--color-fon);
+		border-radius: 4px;
+		margin-bottom: 30px;
+		@extend %aglin-list;
+		justify-content: center;
+	}
+	&__title {
+		@include font(700, 14px, 1.14, 0.03em);
+		text-transform: uppercase;
+		color: var(--color-titles);
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+	&__text {
+		@include font(null, 14px, 1.7, 0.03em);
+		font-weight: 400;
+		line-height: 1.7;
+		color: var(--color-text);
+	}
+}

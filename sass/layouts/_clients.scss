@@ -1,0 +1,41 @@
+.clients {
+	background-color: var(--main-title-color);
+	padding-bottom: 94px;
+
+	&__title {
+		margin-bottom: 50px;
+		@include font(700, 36px, 1.16, 0.03em);
+
+		text-align: center;
+		color: var(--color-titles);
+	}
+}
+
+.clients-list {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+
+	&__logo {
+		width: 170px;
+		height: 92px;
+		border: 1px solid var(--color-soc-icons);
+
+		@extend %aglin-list;
+		justify-content: center;
+		color: var(--color-soc-icons);
+
+		transition: color 250ms var(--timing-function);
+
+		&:hover,
+		&:focus {
+			border: 1px solid var(--accent-color);
+			border-radius: 4px;
+			color: var(--accent-color);
+		}
+	}
+}
+
+.clients-list__logo-icon {
+	fill: currentColor;
+}
