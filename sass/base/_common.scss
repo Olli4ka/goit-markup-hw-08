@@ -6,8 +6,12 @@ body {
 	color: var(--color-titles);
 }
 .section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	@media screen and (min-width: 1200px) {
+		padding-top: 94px;
+		padding-bottom: 94px;
+	}
 }
 .list {
 	padding: 0;
@@ -19,6 +23,7 @@ body {
 }
 img {
 	display: block;
+	width: 100%;
 	max-width: 100%;
 	height: auto;
 }
