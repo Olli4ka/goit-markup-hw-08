@@ -1,6 +1,9 @@
 .doing {
-	background-color: var(--main-title-color);
-	padding-bottom: 94px;
+	display: none;
+	@media screen and (min-width: 1200px) {
+		background-color: var(--main-title-color);
+		display: block;
+	}
 
 	&__title {
 		margin-bottom: 50px;
@@ -14,9 +17,11 @@
 }
 
 .doing__list {
-	display: flex;
-	gap: 30px;
-
+	display: none;
+	@media screen and (min-width: 1200px) {
+		display: flex;
+		gap: 30px;
+	}
 	.doing__img {
 		position: relative;
 	}

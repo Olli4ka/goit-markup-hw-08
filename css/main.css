@@ -239,11 +239,10 @@ button {
 }
 .banner__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -251,12 +250,20 @@ button {
   max-width: 696px;
   color: var(--main-title-color);
 }
+@media screen and (min-width: 1200px) {
+  .banner__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  }
+}
 .banner__button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  padding: 10px 32px;
+  padding: 10px 24px;
   cursor: pointer;
   color: var(--main-title-color);
   background-color: var(--accent-color);
@@ -268,6 +275,11 @@ button {
 .banner__button:hover, .banner__button_button:focus {
   color: var(--main-title-color);
   background-color: var(--main-button-accent);
+}
+@media screen and (min-width: 1200px) {
+  .banner__button {
+    padding: 10px 32px;
+  }
 }
 
 .features__list {
@@ -324,8 +336,13 @@ button {
 }
 
 .doing {
-  background-color: var(--main-title-color);
-  padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .doing {
+    background-color: var(--main-title-color);
+    display: block;
+  }
 }
 .doing__title {
   margin-bottom: 50px;
@@ -341,8 +358,13 @@ button {
 }
 
 .doing__list {
-  display: flex;
-  gap: 30px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .doing__list {
+    display: flex;
+    gap: 30px;
+  }
 }
 .doing__list .doing__img {
   position: relative;
@@ -495,13 +517,8 @@ button {
 }
 
 .clients-list__item {
-  width: 100%;
   margin: 0;
-}
-@media screen and (min-width: 480px) {
-  .clients-list__item {
-    width: calc((100% - 30px) / 2);
-  }
+  width: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
   .clients-list__item {
@@ -515,7 +532,6 @@ button {
 }
 
 .clients-list__logo {
-  width: 170px;
   height: 92px;
   border: 1px solid var(--color-soc-icons);
   justify-content: center;
@@ -692,7 +708,7 @@ address a:hover, address a:focus {
   background-color: var(--main-title-color);
 }
 
-.filters button {
+.filters-button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -705,7 +721,7 @@ address a:hover, address a:focus {
   border-radius: 4px;
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
 }
-.filters button:hover, .filters button:focus, .filters button:active {
+.filters-button:hover, .filters-button:focus, .filters-button:active {
   color: var(--main-title-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -714,9 +730,20 @@ address a:hover, address a:focus {
 
 .filters {
   display: flex;
-  justify-content: center;
-  padding-bottom: 16px;
-  margin-bottom: 34px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
+  }
 }
 .filters-item {
   border: 1px solid var(--color-border);
@@ -728,8 +755,20 @@ address a:hover, address a:focus {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: calc(-1 * var(--card-set-gap));
-  margin-left: calc(-1 * var(--card-set-gap));
+  gap: 30px;
+}
+.cards-item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .cards-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cards-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .cards-link {
   display: block;
@@ -756,12 +795,6 @@ address a:hover, address a:focus {
   letter-spacing: 0.06em;
   color: var(--color-titles);
   margin-bottom: 4px;
-}
-
-.cards > .cards-item {
-  flex-basis: calc(33.3333333333% - var(--card-set-gap));
-  margin-bottom: var(--card-set-gap);
-  margin-left: var(--card-set-gap);
 }
 
 .cards-thumb {

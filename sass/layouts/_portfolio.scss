@@ -1,7 +1,7 @@
 .portfolio {
 	background-color: var(--main-title-color);
 }
-.filters button {
+.filters-button {
 	font-family: inherit;
 	@include font(500, 16px, 1.6, 0.03em);
 	text-align: center;
@@ -25,9 +25,16 @@
 
 .filters {
 	display: flex;
-	justify-content: center;
-	padding-bottom: 16px;
-	margin-bottom: 34px;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: 40px;
+	@media screen and (min-width: 768px) {
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
 	&-item {
 		border: 1px solid var(--color-border);
 		&:not(:last-child) {
@@ -39,8 +46,17 @@
 .cards {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: calc(-1 * var(--card-set-gap));
-	margin-left: calc(-1 * var(--card-set-gap));
+	gap: 30px;
+
+	&-item {
+		width: 100%;
+		@media screen and (min-width: 768px) {
+			width: calc((100% - 30px) / 2);
+		}
+		@media screen and (min-width: 1200px) {
+			width: calc((100% - 60px) / 3);
+		}
+	}
 	&-link {
 		display: block;
 		transition: box-shadow 250ms var(--timing-function);
@@ -65,11 +81,11 @@
 		}
 	}
 }
-.cards > .cards-item {
-	flex-basis: calc(100% / 3 - var(--card-set-gap));
-	margin-bottom: var(--card-set-gap);
-	margin-left: var(--card-set-gap);
-}
+// .cards > .cards-item {
+// 	flex-basis: calc(100% / 3 - var(--card-set-gap));
+// 	margin-bottom: var(--card-set-gap);
+// 	margin-left: var(--card-set-gap);
+// }
 
 .cards-thumb {
 	position: relative;

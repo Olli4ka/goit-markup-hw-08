@@ -20,11 +20,8 @@
 	gap: 30px;
 }
 .clients-list__item {
-	width: 100%;
 	margin: 0;
-	@media screen and (min-width: 480px) {
-		width: calc((100% - 30px) / 2);
-	}
+	width: calc((100% - 30px) / 2);
 	@media screen and (min-width: 768px) {
 		width: calc((100% - 60px) / 3);
 	}
@@ -34,7 +31,6 @@
 }
 
 .clients-list__logo {
-	width: 170px;
 	height: 92px;
 	border: 1px solid var(--color-soc-icons);
 
