@@ -156,8 +156,8 @@ button {
 }
 
 .site-nav {
+  display: none;
   position: relative;
-  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   margin: 0 auto;
@@ -179,7 +179,7 @@ button {
 }
 
 .auth-nav {
-  display: flex;
+  display: none;
   margin-left: auto;
   gap: 50px;
 }
@@ -214,6 +214,11 @@ button {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+}
+
+.menu-open {
+  margin-right: 0;
+  background-color: inherit;
 }
 
 .banner {

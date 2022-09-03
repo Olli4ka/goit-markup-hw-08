@@ -20,8 +20,9 @@
 	color: var(--color-black);
 }
 .site-nav {
+	display: none;
 	position: relative;
-	display: flex;
+
 	padding-top: 32px;
 	padding-bottom: 32px;
 	margin: 0 auto;
@@ -40,7 +41,8 @@
 	}
 }
 .auth-nav {
-	display: flex;
+	display: none;
+
 	margin-left: auto;
 	gap: 50px;
 }
@@ -77,4 +79,8 @@
 		background-color: var(--accent-color);
 		border-radius: 2px;
 	}
+}
+.menu-open {
+	margin-right: 0;
+	background-color: inherit;
 }
