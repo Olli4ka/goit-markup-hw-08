@@ -5,21 +5,27 @@
 .page-header .container {
 	@extend %aglin-list;
 }
-.page-navigation {
-	display: flex;
-	.logo {
-		font-family: "Raleway", sans-serif;
-		font-style: normal;
-		@include font(700, 26px, 1.19, 0.03em);
-		color: var(--accent-color);
-		padding-top: 24px;
-		padding-bottom: 25px;
-		margin-right: 93px;
-	}
+
+.logo {
+	font-family: "Raleway", sans-serif;
+	font-style: normal;
+	@include font(700, 26px, 1.19, 0.03em);
+	color: var(--accent-color);
+	padding-top: 24px;
+	padding-bottom: 25px;
+	margin-right: 93px;
 }
 
 .color-black {
 	color: var(--color-black);
+}
+.site-nav {
+	position: relative;
+	display: flex;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	margin: 0 auto;
+	gap: 50px;
 }
 
 .site-nav-link {
@@ -27,6 +33,27 @@
 	color: var(--color-titles);
 	transition: color 250ms var(--timing-function);
 	padding-bottom: 32px;
+	&:hover,
+	&:focus {
+		cursor: pointer;
+		color: var(--accent-color);
+	}
+}
+.auth-nav {
+	display: flex;
+	margin-left: auto;
+	gap: 50px;
+}
+
+.auth-nav-link {
+	@include font(500, 14px, 1.14, 0.02em);
+	@extend %aglin-list;
+	justify-content: center;
+	gap: 10px;
+	fill: currentColor;
+	color: var(--color-text);
+	transition: color 250ms var(--timing-function);
+
 	&:hover,
 	&:focus {
 		cursor: pointer;
@@ -50,39 +77,4 @@
 		background-color: var(--accent-color);
 		border-radius: 2px;
 	}
-}
-.site-nav {
-	position: relative;
-	display: flex;
-	padding-top: 32px;
-	padding-bottom: 32px;
-	margin: 0 auto;
-	gap: 50px;
-}
-
-.auth-nav a {
-	@include font(500, 14px, 1.14, 0.02em);
-
-	color: var(--color-text);
-	transition: color 250ms var(--timing-function);
-
-	&:hover,
-	&:focus {
-		cursor: pointer;
-		color: var(--accent-color);
-	}
-}
-
-.auth-nav {
-	display: flex;
-	margin-left: auto;
-	gap: 50px;
-}
-
-.header-envelope,
-.header-smartphone {
-	@extend %aglin-list;
-	justify-content: center;
-	gap: 10px;
-	fill: currentColor;
 }

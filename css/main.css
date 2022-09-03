@@ -98,8 +98,7 @@ img {
   align-items: center;
 }
 
-.modal-button, .checkbox-text span, .checkbox-text, .close, .subscribe-input .subscribe-input::placeholder, .subscribe-input, .subscribe-form .subscribe-button, .sotial-links, .clients-list__logo, .contacts__link, .features__icon, .banner__button, .header-envelope,
-.header-smartphone, .page-header .container {
+.modal-button, .checkbox-text span, .checkbox-text, .close, .subscribe-input .subscribe-input::placeholder, .subscribe-input, .subscribe-form .subscribe-button, .sotial-links, .clients-list__logo, .contacts__link, .features__icon, .banner__button, .auth-nav-link, .page-header .container {
   display: flex;
   align-items: center;
 }
@@ -139,10 +138,7 @@ button {
   border-bottom: 1px solid var(--color-header-line);
 }
 
-.page-navigation {
-  display: flex;
-}
-.page-navigation .logo {
+.logo {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -159,6 +155,15 @@ button {
   color: var(--color-black);
 }
 
+.site-nav {
+  position: relative;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
 .site-nav-link {
   font-weight: 500;
   font-size: 14px;
@@ -169,6 +174,28 @@ button {
   padding-bottom: 32px;
 }
 .site-nav-link:hover, .site-nav-link:focus {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+  gap: 50px;
+}
+
+.auth-nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  justify-content: center;
+  gap: 10px;
+  fill: currentColor;
+  color: var(--color-text);
+  transition: color 250ms var(--timing-function);
+}
+.auth-nav-link:hover, .auth-nav-link:focus {
   cursor: pointer;
   color: var(--accent-color);
 }
@@ -189,41 +216,6 @@ button {
   border-radius: 2px;
 }
 
-.site-nav {
-  position: relative;
-  display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  margin: 0 auto;
-  gap: 50px;
-}
-
-.auth-nav a {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--color-text);
-  transition: color 250ms var(--timing-function);
-}
-.auth-nav a:hover, .auth-nav a:focus {
-  cursor: pointer;
-  color: var(--accent-color);
-}
-
-.auth-nav {
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
-}
-
-.header-envelope,
-.header-smartphone {
-  justify-content: center;
-  gap: 10px;
-  fill: currentColor;
-}
-
 .banner {
   background-color: var(--color-fon-banner);
   padding-top: 118px;
@@ -233,6 +225,7 @@ button {
   margin-left: auto;
   margin-right: auto;
   background-image: var(--gradient-hero), url(../images/header-mobile-1x.jpg);
+  background-image: var(--gradient-hero), url(../images/header-mobile-1x-webp.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -240,17 +233,20 @@ button {
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .banner {
     background-image: var(--gradient-hero), url(../images/header-mobile-2x.jpg);
+    background-image: var(--gradient-hero), url(../images/header-mobile-2x-webp.webp);
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
     max-width: 768px;
     background-image: var(--gradient-hero), url(../images/header-tablet-1x.jpg);
+    background-image: var(--gradient-hero), url(../images/header-tablet-1x-webp.webp);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .banner {
     background-image: var(--gradient-hero), url(../images/header-tablet-2x.jpg);
+    background-image: var(--gradient-hero), url(../images/header-tablet-2x-webp.webp);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -260,11 +256,13 @@ button {
     padding-top: 200px;
     padding-bottom: 200px;
     background-image: var(--gradient-hero), url(../images/header-desktop-1x.jpg);
+    background-image: var(--gradient-hero), url(../images/header-desktop-1x-webp.webp);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .banner {
     background-image: var(--gradient-hero), url(../images/header-desktop-2x.jpg);
+    background-image: var(--gradient-hero), url(../images/header-desktop-2x-webp.webp);
   }
 }
 .banner__title {
