@@ -10,7 +10,7 @@
   --contacts-in-footer: rgba(255, 255, 255, 0.6);
   --color-border: #eeeeee;
   --color-header-line: #ececec;
-  --color-gradient-hero: rgba(47, 48, 58, 0.4);
+  --gradient-hero: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
   --color-soc-icons: #afb1b8;
   --card-set-gap: 30px;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -232,14 +232,25 @@ button {
   max-width: 480px;
   margin-left: auto;
   margin-right: auto;
-  background-image: linear-gradient(var(--color-gradient-hero), var(--color-gradient-hero)), url(../images/hero.jpg);
+  background-image: var(--gradient-hero), url(../images/header-mobile-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background-image: var(--gradient-hero), url(../images/header-mobile-2x.jpg);
+  }
+}
 @media screen and (min-width: 768px) {
   .banner {
     max-width: 768px;
+    background-image: var(--gradient-hero), url(../images/header-tablet-1x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: var(--gradient-hero), url(../images/header-tablet-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -248,6 +259,12 @@ button {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: var(--gradient-hero), url(../images/header-desktop-1x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: var(--gradient-hero), url(../images/header-desktop-2x.jpg);
   }
 }
 .banner__title {
@@ -282,6 +299,8 @@ button {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  width: 200px;
+  height: 43, 9px;
   padding: 10px 24px;
   cursor: pointer;
   color: var(--main-title-color);
@@ -295,9 +314,15 @@ button {
   color: var(--main-title-color);
   background-color: var(--main-button-accent);
 }
+@media screen and (min-width: 768px) {
+  .banner__button {
+    height: 50px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .banner__button {
     padding: 10px 32px;
+    width: 216px;
   }
 }
 
