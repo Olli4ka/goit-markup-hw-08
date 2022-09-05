@@ -9,11 +9,18 @@
 .logo {
 	font-family: "Raleway", sans-serif;
 	font-style: normal;
-	@include font(700, 26px, 1.19, 0.03em);
+	@include font(700, 24px, 1.16, 0.03em);
 	color: var(--accent-color);
 	padding-top: 24px;
 	padding-bottom: 25px;
-	margin-right: 93px;
+	margin-right: auto;
+	@include tablet {
+		margin-right: 87px;
+	}
+	@include desktop {
+		@include font(700, 26px, 1.19, 0.03em);
+		margin-right: 92px;
+	}
 }
 
 .color-black {
@@ -27,6 +34,9 @@
 	padding-bottom: 32px;
 	margin: 0 auto;
 	gap: 50px;
+	@include tablet {
+		display: flex;
+	}
 }
 
 .site-nav-link {
@@ -42,20 +52,33 @@
 }
 .auth-nav {
 	display: none;
-
 	margin-left: auto;
-	gap: 50px;
+	@include tablet {
+		display: block;
+	}
+	@include desktop {
+		display: flex;
+		gap: 30px;
+	}
+}
+
+.auth-nav-item:not(:last-child) {
+	margin-bottom: 10px;
 }
 
 .auth-nav-link {
-	@include font(500, 14px, 1.14, 0.02em);
-	@extend %aglin-list;
-	justify-content: center;
-	gap: 10px;
+	@include font(500, 12px, 1.16, 0.02em);
+	display: flex;
+	justify-content: flex-start;
+	gap: 8px;
 	fill: currentColor;
 	color: var(--color-text);
 	transition: color 250ms var(--timing-function);
-
+	@include desktop {
+		@include font(500, 14px, 1.14, 0.02em);
+		align-items: center;
+		justify-content: center;
+	}
 	&:hover,
 	&:focus {
 		cursor: pointer;
@@ -70,7 +93,6 @@
 	&::after {
 		content: "";
 		position: absolute;
-
 		bottom: 0;
 		left: 0;
 		display: block;

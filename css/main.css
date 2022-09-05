@@ -98,7 +98,7 @@ img {
   align-items: center;
 }
 
-.modal-button, .checkbox-text span, .checkbox-text, .close, .subscribe-input .subscribe-input::placeholder, .subscribe-input, .subscribe-form .subscribe-button, .sotial-links, .clients-list__logo, .contacts__link, .features__icon, .banner__button, .auth-nav-link, .page-header .container {
+.modal-button, .checkbox-text span, .checkbox-text, .close, .subscribe-input .subscribe-input::placeholder, .subscribe-input, .subscribe-form .subscribe-button, .sotial-links, .clients-list__logo, .contacts__link, .features__icon, .banner__button, .page-header .container {
   display: flex;
   align-items: center;
 }
@@ -142,13 +142,27 @@ button {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 93px;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    margin-right: 92px;
+  }
 }
 
 .color-black {
@@ -162,6 +176,11 @@ button {
   padding-bottom: 32px;
   margin: 0 auto;
   gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: flex;
+  }
 }
 
 .site-nav-link {
@@ -181,19 +200,44 @@ button {
 .auth-nav {
   display: none;
   margin-left: auto;
-  gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .auth-nav {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.auth-nav-item:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .auth-nav-link {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
-  justify-content: center;
-  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
   fill: currentColor;
   color: var(--color-text);
   transition: color 250ms var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .auth-nav-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .auth-nav-link:hover, .auth-nav-link:focus {
   cursor: pointer;
