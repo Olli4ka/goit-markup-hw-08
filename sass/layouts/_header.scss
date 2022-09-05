@@ -83,6 +83,9 @@
 .menu-open {
 	margin-right: 0;
 	background-color: inherit;
+	@include tablet {
+		display: none;
+	}
 }
 .menu-container {
 	width: 100%;
@@ -102,12 +105,21 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
+	@include tablet {
+		display: none;
+	}
 }
 .menu-close {
 	display: block;
 	margin-right: 0;
 	margin-left: auto;
 	background-color: inherit;
+	fill: var(--color-titles);
+	transition: fill 250ms var(--timing-function);
+	&:hover,
+	&:focus {
+		fill: var(--accent-color);
+	}
 }
 .mob-menu-item:not(:last-child) {
 	margin-bottom: 32px;
@@ -118,6 +130,9 @@
 	line-height: 1.17;
 	letter-spacing: 0.02em;
 	color: var(--color-titles);
+}
+.active {
+	color: var(--accent-color);
 }
 .mob-contacts {
 	margin-bottom: 64px;
