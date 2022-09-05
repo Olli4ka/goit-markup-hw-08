@@ -738,13 +738,14 @@ button {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  text-align: center;
 }
 
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   display: block;
   font-style: normal;
@@ -758,11 +759,9 @@ button {
 
 .position {
   display: flex;
-  align-items: baseline;
-}
-
-.footer-contacts {
-  margin-right: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
 }
 
 .address {
@@ -773,7 +772,7 @@ button {
 }
 
 .adress-item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .adr {
@@ -807,7 +806,6 @@ address a:hover, address a:focus {
 
 .sotial-list {
   display: flex;
-  justify-content: center;
   gap: 10px;
 }
 
@@ -824,9 +822,6 @@ address a:hover, address a:focus {
   background-color: var(--accent-color);
 }
 
-.footer-sub {
-  margin-left: auto;
-}
 .footer-sub .subscribe {
   font-weight: 700;
   font-size: 14px;
@@ -838,10 +833,6 @@ address a:hover, address a:focus {
   color: var(--main-title-color);
 }
 
-.subscribe-form {
-  display: flex;
-  gap: 12px;
-}
 .subscribe-form .subscribe-button {
   font-weight: 700;
   font-size: 16px;
@@ -861,6 +852,7 @@ address a:hover, address a:focus {
 .subscribe-input {
   width: 358px;
   height: 50px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
