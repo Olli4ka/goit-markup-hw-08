@@ -3,6 +3,9 @@
 	padding-top: 60px;
 	padding-bottom: 60px;
 	text-align: center;
+	@include desktop {
+		text-align: left;
+	}
 }
 .logo-footer {
 	font-family: "Raleway", sans-serif;
@@ -11,6 +14,9 @@
 	font-style: normal;
 	color: var(--accent-color);
 	margin-bottom: 20px;
+	@include desktop {
+		@include font(700, 26px, 1.19, 0.03em);
+	}
 }
 .color-white {
 	color: var(--main-title-color);
@@ -18,26 +24,17 @@
 .position {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
 	gap: 60px;
 	@media screen and (min-width: 768px) {
 		flex-direction: row;
 		justify-content: space-around;
 	}
 }
-.position-item {
-	width: 100%;
-	// @media screen and (min-width: 768px) {
-	// 	width: calc((100% - 30px) / 2);
-	// }
-}
-// .footer-contacts {
-// 	width: 100%;
-// }
 .address {
 	@include font(null, 14px, 1.7, 0.03em);
 	font-style: normal;
 }
-
 .adress-item:not(:last-child) {
 	margin-bottom: 8px;
 }
@@ -57,9 +54,6 @@ address a {
 		color: var(--accent-color);
 	}
 }
-// .adition {
-// 	width: 100%;
-// }
 .add {
 	@include font(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
@@ -88,50 +82,53 @@ address a {
 	}
 }
 
-.footer-sub {
-	// width: 100%;
-	// margin-left: auto;
-
-	.subscribe {
-		@include font(700, 14px, 1.14, 0.03em);
-		text-transform: uppercase;
-		display: block;
-		margin-bottom: 20px;
-		color: var(--main-title-color);
-	}
+.subscribe {
+	@include font(700, 14px, 1.14, 0.03em);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: 20px;
+	color: var(--main-title-color);
 }
+
 .subscribe-form {
-	// display: flex;
-	// gap: 12px;
-
-	.subscribe-button {
-		@include font(700, 16px, 1.88, 0.06em);
-		padding: 10px 28px;
-		color: var(--main-title-color);
-		background-color: var(--accent-color);
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-		border-radius: 4px;
-
-		margin-left: auto;
-		margin-right: auto;
-		@extend %aglin-list;
-		justify-content: center;
-		gap: 10px;
+	@include desktop {
+		display: flex;
+		gap: 12px;
 	}
 }
+
+.subscribe-button {
+	@include font(700, 16px, 1.88, 0.06em);
+	padding: 10px 28px;
+	color: var(--main-title-color);
+	background-color: var(--accent-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+
+	width: 200px;
+	height: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	@extend %aglin-list;
+	justify-content: center;
+	gap: 10px;
+}
+
 .subscribe-input {
-	width: 100%;
+	width: 450px;
 	height: 50px;
 	margin-bottom: 20px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
-
 	background-color: transparent;
 
 	@include font(null, 16px, 1.25, 0.03em);
 	@extend %aglin-list;
 	color: rgba(255, 255, 255, 0.6);
+	@include desktop {
+		width: 358px;
+	}
 
 	.subscribe-input::placeholder {
 		@include font(null, 16px, 1.25, 0.03em);

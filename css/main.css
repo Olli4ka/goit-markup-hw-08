@@ -98,7 +98,7 @@ img {
   align-items: center;
 }
 
-.modal-button, .checkbox-text span, .checkbox-text, .close, .subscribe-input .subscribe-input::placeholder, .subscribe-input, .subscribe-form .subscribe-button, .sotial-links, .clients-list__logo, .contacts__link, .features__icon, .banner__button, .page-header .container {
+.modal-button, .checkbox-text span, .checkbox-text, .close, .subscribe-input .subscribe-input::placeholder, .subscribe-input, .subscribe-button, .sotial-links, .clients-list__logo, .contacts__link, .features__icon, .banner__button, .page-header .container {
   display: flex;
   align-items: center;
 }
@@ -740,6 +740,11 @@ button {
   padding-bottom: 60px;
   text-align: center;
 }
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: left;
+  }
+}
 
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -752,6 +757,14 @@ button {
   color: var(--accent-color);
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+  }
+}
 
 .color-white {
   color: var(--main-title-color);
@@ -760,6 +773,7 @@ button {
 .position {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   gap: 60px;
 }
 @media screen and (min-width: 768px) {
@@ -767,10 +781,6 @@ button {
     flex-direction: row;
     justify-content: space-around;
   }
-}
-
-.position-item {
-  width: 100%;
 }
 
 .address {
@@ -832,7 +842,7 @@ address a:hover, address a:focus {
   background-color: var(--accent-color);
 }
 
-.footer-sub .subscribe {
+.subscribe {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -843,7 +853,14 @@ address a:hover, address a:focus {
   color: var(--main-title-color);
 }
 
-.subscribe-form .subscribe-button {
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    display: flex;
+    gap: 12px;
+  }
+}
+
+.subscribe-button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -853,6 +870,8 @@ address a:hover, address a:focus {
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  width: 200px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -860,7 +879,7 @@ address a:hover, address a:focus {
 }
 
 .subscribe-input {
-  width: 100%;
+  width: 450px;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -871,6 +890,11 @@ address a:hover, address a:focus {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-input {
+    width: 358px;
+  }
 }
 .subscribe-input .subscribe-input::-moz-placeholder {
   font-size: 16px;
