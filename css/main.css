@@ -958,6 +958,7 @@ address a:hover, address a:focus {
 }
 .filters-item {
   border: 1px solid var(--color-border);
+  border-radius: 4px;
 }
 .filters-item:not(:last-child) {
   margin-right: 8px;
