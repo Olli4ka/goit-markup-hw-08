@@ -33,6 +33,7 @@
 .clients-list__logo {
 	height: 92px;
 	border: 1px solid var(--color-soc-icons);
+	border-radius: 4px;
 
 	@extend %aglin-list;
 	justify-content: center;

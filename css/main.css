@@ -334,10 +334,18 @@ button {
 
 .header-mob-smartphone {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .header-mob-smartphone {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
 }
 
 .header-mob-evenlope {
@@ -350,6 +358,7 @@ button {
 
 .mob-soc {
   display: flex;
+  margin-bottom: 48px;
 }
 
 .mob-soc-item:not(:last-child) {
@@ -360,10 +369,18 @@ button {
 
 .mob-soc-link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mob-soc-link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+  }
 }
 
 .banner {
@@ -536,9 +553,6 @@ button {
   font-size: 36px;
   line-height: 1.16;
   letter-spacing: 0.03em;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
   text-align: center;
   color: var(--color-titles);
 }
@@ -588,12 +602,12 @@ button {
   color: var(--color-titles);
 }
 @media screen and (min-width: 768px) {
-  .team {
+  .team__title {
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .team {
+  .team__title {
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
@@ -720,6 +734,7 @@ button {
 .clients-list__logo {
   height: 92px;
   border: 1px solid var(--color-soc-icons);
+  border-radius: 4px;
   justify-content: center;
   color: var(--color-soc-icons);
   transition: color 250ms var(--timing-function);
@@ -779,7 +794,7 @@ button {
 @media screen and (min-width: 768px) {
   .position {
     flex-direction: row;
-    justify-content: space-around;
+    align-items: baseline;
   }
 }
 
@@ -879,7 +894,7 @@ address a:hover, address a:focus {
 }
 
 .subscribe-input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -890,6 +905,11 @@ address a:hover, address a:focus {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 480px) {
+  .subscribe-input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe-input {
@@ -943,6 +963,7 @@ address a:hover, address a:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  row-gap: 15px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -986,6 +1007,13 @@ address a:hover, address a:focus {
   display: block;
   transition: box-shadow 250ms var(--timing-function);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cards-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
 .cards-link:hover, .cards-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -993,6 +1021,11 @@ address a:hover, address a:focus {
   padding: 20px 24px;
   border: 1px solid var(--color-border);
   border-top: none;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cards .cards-content {
+    flex-grow: 1;
+  }
 }
 .cards .cards-content .cards-text {
   font-size: 16px;
@@ -1018,7 +1051,7 @@ address a:hover, address a:focus {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 63px;

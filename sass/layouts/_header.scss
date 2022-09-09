@@ -147,10 +147,7 @@
 	margin-bottom: 32px;
 }
 .mob-menu-link {
-	font-weight: 500;
-	font-size: 40px;
-	line-height: 1.17;
-	letter-spacing: 0.02em;
+	@include font(500, 40px, 1.17, 0.02em);
 	color: var(--color-titles);
 }
 .active {
@@ -164,22 +161,20 @@
 }
 
 .header-mob-smartphone {
-	font-weight: 500;
-	font-size: 34px;
-	line-height: 1.17;
-	letter-spacing: 0.02em;
+	@include font(500, 30px, 1.17, 0.02em);
 	color: var(--accent-color);
+	@include mobile {
+		@include font(500, 34px, 1.17, 0.02em);
+	}
 }
 .header-mob-evenlope {
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 1.16;
-	letter-spacing: 0.02em;
+	@include font(500, 24px, 1.16, 0.02em);
 	color: var(--color-text);
 }
 
 .mob-soc {
 	display: flex;
+	margin-bottom: 48px;
 }
 .mob-soc-item:not(:last-child) {
 	padding-right: 10px;
@@ -187,9 +182,9 @@
 	border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 .mob-soc-link {
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 1.2;
-	letter-spacing: 0.02em;
+	@include font(500, 12px, 1.2, 0.02em);
 	color: var(--accent-color);
+	@include mobile {
+		@include font(500, 18px, 1.2, 0.02em);
+	}
 }
