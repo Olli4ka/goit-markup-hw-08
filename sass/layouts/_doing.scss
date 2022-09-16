@@ -1,8 +1,8 @@
 .doing {
 	display: none;
 	@media screen and (min-width: 1200px) {
-		background-color: var(--main-title-color);
 		display: block;
+		padding-top: 0;
 	}
 
 	&__title {

@@ -543,8 +543,8 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .doing {
-    background-color: var(--main-title-color);
     display: block;
+    padding-top: 0;
   }
 }
 .doing__title {
@@ -980,9 +980,6 @@ address a:hover, address a:focus {
 .filters-item {
   border: 1px solid var(--color-border);
   border-radius: 4px;
-}
-.filters-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .cards {
